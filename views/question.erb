@@ -1,0 +1,19 @@
+<div class="question">
+
+<label><strong><%= question[:text] %></strong>
+
+    <ul>
+    <% question[:answers].each do |answer| %>
+        <li>
+        <input name="<%= question[:name] %>" value="<%= question[:answers].index(answer) %>" type="radio">
+        <%= answer %>
+        </input>
+        </li>
+
+    <% end %>
+    </ul>
+    </input>
+
+</label>
+
+</div>

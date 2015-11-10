@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+#
+require 'sinatra'
+require 'erb'
+require 'json'
+
+def load_questions
+
+    [
+
+        {
+            name: "animal",
+            text: "What's your spirit animal?",
+            answers: [
+                "cat",
+                "dog",
+                "horse"
+            ]
+
+        },
+
+        {
+            name: "gender",
+            text: "What's your gender?",
+            answers: [
+                "male",
+                "female"
+            ]
+        }
+
+    ]
+
+end
+
+get '/' do
+    @questions = load_questions
+    erb :index
+end
+
+post '/' do
+    erb :results
+end

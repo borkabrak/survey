@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+    <h1>Survey</h1>
+
+    <form method="post">
+    <% @questions.each do |question| %>
+        <%= erb :question, :locals => { question: question } %>
+    <% end %>
+
+    <button>Submit</button>
+
+    </form>
+
+</body>
+</html>

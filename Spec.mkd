@@ -1,0 +1,19 @@
+Survey
+======
+
+An application to conduct a survey with fully dynamic content, all dependent
+on data fetched or generated at runtime.
+
+Requirements:
+
+* Easy to change the content
+
+* Survey content fetched from a data source dynamically. (For development, a
+flat file, json object, or sqlite3 are all fine.)
+
+* Mobile-friendly
+
+Notes
+=====
+
+2015-11-10 - Skeleton functionality in place.
