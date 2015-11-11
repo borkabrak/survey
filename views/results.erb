@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Results</title>
+</head>
+<body>
+
+<h1>Survey Results</h1>
+<p>You've completed the survey!  Here are your results:
+<dialog id="greeting" open>Hi</dialog>
+<ul>
+<% params.each do |p| %>
+    <li><%= p %>
+<% end %>
+</ul>
+
+<script>
+</script>
+    
+</body>
+</html>
