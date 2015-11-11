@@ -4,36 +4,9 @@ require 'sinatra'
 require 'erb'
 require 'json'
 
-def load_questions
-
-    [
-
-        {
-            name: "animal",
-            text: "What's your spirit animal?",
-            answers: [
-                "cat",
-                "dog",
-                "horse"
-            ]
-
-        },
-
-        {
-            name: "gender",
-            text: "What's your gender?",
-            answers: [
-                "male",
-                "female"
-            ]
-        }
-
-    ]
-
-end
-
+require_relative 'survey_questions'
 get '/' do
-    @questions = load_questions
+    @questions = SurveyQuestions::SAMPLE_QUESTIONS
     erb :index
 end
 
